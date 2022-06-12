@@ -12,10 +12,10 @@ terraform {
   required_version = "~> 1.0"
 
   backend "remote" {
-    organization = "REPLACE_ME"
+    organization = "ACG-Terraform-Labs-Sruthi"
 
     workspaces {
-      name = "REPLACE_ME"
+      name = "labs-migrate-state"
     }
   }
 }
@@ -54,3 +54,4 @@ resource "aws_security_group" "web-sg" {
 output "web-address" {
   value = "${aws_instance.web.public_dns}:8080"
 }
+
